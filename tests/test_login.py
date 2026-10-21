@@ -11,7 +11,7 @@ def test_successful_login(page: Page):
     page.get_by_role("button", name="Log in").click()
 
     expect(page).to_have_url("http://127.0.0.1:5000/dashboard")
-    expect(page.get_by_role("heading", name=" Not Welcome back")).to_be_visible()
+    expect(page.get_by_role("heading", name="Welcome back")).to_be_visible()
 
 
 def test_invalid_login(page: Page):
